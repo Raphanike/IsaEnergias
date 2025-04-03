@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Cliente</h2>
+        <form id="cadastroForm">
+            <input type="text" id="codigo" placeholder="Código" required>
+            <input type="text" id="proprietario" placeholder="Proprietário" required>
+            <input type="text" id="embargos" placeholder="Embargos" required>
+            <input type="text" id="id" placeholder="ID" required>
+            <input type="text" id="lt" placeholder="LT" required>
+            <input type="text" id="projeto" placeholder="Projeto" required>
+            <input type="text" id="status_negociacao" placeholder="Status Negociação" required>
+            <input type="date" id="data_impos" required>
+            <input type="text" id="dominio" placeholder="Domínio" required>
+            <input type="text" id="nome_dominio" placeholder="Nome Domínio" required>
+            <input type="text" id="cri" placeholder="CRI" required>
+            <input type="text" id="nome_imovel" placeholder="Nome Imóvel" required>
+            <input type="text" id="torre" placeholder="Torre" required>
+            <input type="number" id="quantidade_torre" placeholder="Quantidade de Torres" required>
+            <input type="text" id="espander" placeholder="Espander" required>
+            <input type="date" id="data_emissao" required>
+            <input type="date" id="data_embargo" required>
+            
+            <textarea id="relatorio" placeholder="Relatório"></textarea>
+            <div class="assinatura">
+                <label>Assinatura:</label>
+                <input type="text" id="assinatura" placeholder="Nome do Assinante" required>
+            </div>
+            
+            <button type="submit">Salvar</button>
+            <button type="button" onclick="exportToWord()">Exportar para Word</button>
+            <button type="button" onclick="exportToExcel()">Exportar para Excel</button>
+            <button type="button" onclick="exportToPDF()">Exportar para PDF</button>
+        </form>
+    </div>
+    
+    <script src="javascript.js"></script>
+</body>
+</html>
